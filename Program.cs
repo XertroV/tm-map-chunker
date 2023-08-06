@@ -16,8 +16,7 @@ internal class Program
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("error: first argument must be the map file");
-            // AwaitEnter();
+            PrintHelp();
             return;
         }
 
@@ -60,8 +59,8 @@ internal class Program
             throw e;
         }
 
-        map.MapName += "_resave";
-        map.Save(mapFile.Substring(0, mapFile.Length - 8) + "_resave.Map.Gbx");
+        // map.MapName += "_resave";
+        // map.Save(mapFile.Substring(0, mapFile.Length - 8) + "_resave.Map.Gbx");
 
         var chunkWholeMap = x < 0 || z < 0;
         var mapDims = map.Size!.Value;
@@ -130,7 +129,7 @@ internal class Program
         }
         // map.MapUid += $"{currx}_{currz}_{width}_{depth}";
         map.Save(outFile);
-        Console.WriteLine($"Wrote Map Chunk: {outFile}");
+        Console.WriteLine($"Wrote Map Chunk: {outFile} (size: {map.Size.ToString()})");
     }
 
     private static bool BlockIsInRegion(CGameCtnBlock b, float currx, float currz, float width, float depth)
