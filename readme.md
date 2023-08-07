@@ -25,3 +25,5 @@ Examples:
   * creates one chunk from a map of size 64x32 maps, starting at x=11 and z=17 (ending at x=74, z=48 inclusive)
 
 Map in screenshot credit: Ski Freak
+
+Code: https://github.com/xertrov/tm-map-chunker

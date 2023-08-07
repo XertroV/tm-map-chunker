@@ -157,10 +157,10 @@ internal class Program
     private static void ModPosition(CGameCtnAnchoredObject item, int currx, int currz, int width, int depth, Int3 offset)
     {
         item.MacroblockReference = null;
-        item.SnappedOnBlock = null;
-        item.SnappedOnGroup = null;
-        item.SnappedOnItem = null;
-        item.PlacedOnItem = null;
+        // item.SnappedOnBlock = null;
+        // item.SnappedOnGroup = null;
+        // item.SnappedOnItem = null;
+        // item.PlacedOnItem = null;
         item.BlockUnitCoord = ModCoord(item.BlockUnitCoord, currx, currz, width, depth, offset);
         item.AbsolutePositionInMap = ModPosVec3(item.AbsolutePositionInMap, currx, currz, width, depth, offset);
     }
